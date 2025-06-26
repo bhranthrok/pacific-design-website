@@ -14,13 +14,54 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #293E19;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: freight-sans-pro;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Custom Color Palette */
+
+.bg-my-light-beige {
+  background-color: #F3EFE3;
+}
+
+.text-my-light-beige {
+  color: #F3EFE3;
+}
+
+.bg-my-beige {
+  background-color: #E9E3CF;
+}
+
+.text-my-beige {
+  color: #e9E3cf;
+}
+
+.bg-my-green {
+  background-color: #293E19;
+}
+
+.text-my-green {
+  color: #293E19;
+}
+
+.bg-my-dark-green{
+  background-color: #152613;
+}
+
+.text-my-dark-green {
+  color: #152613;
+}
+
+

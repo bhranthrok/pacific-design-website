@@ -1,103 +1,114 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import YelpReviews from '@/components/YelpReviews';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+    <section id="hero" className='relative w-full h-[70vh] md:h-screen'>
+      <Image
+        src="/Render.webp"
+        alt="Landscaping Work"
+        fill
+        priority
+        className='object-cover'
+      />
+      <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center">
+        <h1 className="text-white pb-3 text-xl md:text-3xl">
+          Pacific Design Landscaping
+        </h1>
+        <h2 className="text-white  text-2xl md:text-6xl">
+          Transform Your Outdoor Space
+        </h2>
+          <div className="flex flex-col items-center gap-4 pt-6 md:flex-row md:justify-center md:gap-10">
+          <button className="px-6 py-3 rounded-xl backdrop-blur-sm bg-white/10 border border-white/20 text-white font-semibold shadow-md hover:bg-white/20 transition-all duration-300">
+            <Link href="#services">Our Services</Link>
+          </button>
+          <button className="px-6 py-3 rounded-xl backdrop-blur-sm bg-white/10 border border-white/20 text-white font-semibold shadow-md hover:bg-white/20 transition-all duration-300">
+            <Link href="#contact">Get a Free Quote</Link>
+          </button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </div>
+    </section>
+
+    <section id="about" className="min-h-[30vh] w-full bg-my-light-beige py-15 px-6 items-center justify-center">
+      <h1 className="text-3xl text-bold text-center pb-10">About Us</h1>
+      <h1 className="text-2xl text-center">
+        At Pacific Design, we specialize in designing and constructing stunning outdoor spaces that are both beautiful and functional. From redesigning your garden to building custom patios or transforming your entire landscape, our team of skilled professionals is with you every step of the way. With a focus on quality craftsmanship and meticulous attention to detail, we ensure every project exceeds expectations. Let us help you create the perfect outdoor space that enhances both the beauty and value of your property.
+        </h1>
+    </section>
+
+    <section id="services" className="min-h-screen bg-my-beige py-15 px-6">
+      <h1 className="text-3xl text-bold text-center pb-10">Our Services</h1>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="relative rounded-xl overflow-hidden shadow-lg group h-64">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/services/DesignPlanning.webp"
+            alt="Card 1"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <h3 className="text-white text-xl">Design & Planning</h3>
+        </div>
+      </div>
+
+      <div className="relative rounded-xl overflow-hidden shadow-lg group h-64">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/services/Installation.webp"
+            alt="Card 2"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <h3 className="text-white text-xl">Installation</h3>
+        </div>
+      </div>
+
+      <div className="relative rounded-xl overflow-hidden shadow-lg group h-64">
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src="/services/Hardscaping & Structures.webp"
+            alt="Card 3"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <h3 className="text-white text-xl">Hardscaping & Structures</h3>
+        </div>
+      </div>
+
+      <div className="relative rounded-xl overflow-hidden shadow-lg group h-64">
+          <Image
+            src="/services/Maintenance & Management.webp"
+            alt="Card 3"
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <h3 className="text-white text-xl">Maintenace & Management</h3>
+        </div>
+      </div>
+
+      </div>
+
+    </section>
+
+    <section id="reviews" className="items-center min-h-screen bg-my-light-beige py-15 px-6">
+      <h1 className="text-3xl text-bold text-center pb-10">Reviews</h1>
+        <YelpReviews />
+    </section>
+
+    <section id="contact" className="min-h-[30vh] bg-my-beige py-15 px-6">
+      <h1 className="text-3xl text-bold text-center">Contact Us</h1>
+      <h1 className="flex justify-center items-center text-3xl pt-5">(650) 796-5188</h1>
+    </section>
+    <div className="w-full flex justify-end bg-my-beige px-6 py-2">
+      <p className="text-sm text-gray-900">
+        Website by <a href="https://www.linkedin.com/in/luizcauet/" className="hover:underline">Luiz Blum </a>
+        & <a href="https://hherakoi.artstation.com" className="hover:underline">Eri Foulds</a>
+      </p>
     </div>
+  </>
   );
 }
