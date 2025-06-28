@@ -86,7 +86,7 @@ export default function Home() {
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <h3 className="text-white text-xl">Maintenace & Management</h3>
+          <h3 className="text-white text-xl">Maintenance & Management</h3>
         </div>
       </div>
 

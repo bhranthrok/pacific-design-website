@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
                 </div>
 
                 {/* Desktop */}
-                <div className="hidden md:flex space-x-6">
+                <div className="hidden md:flex space-x-6 transition-all">
                     <Link href="#about" className='hover:underline'>About</Link>
                     <Link href="#services" className='hover:underline'>Services</Link>
                     <Link href="#reviews" className='hover:underline'>Reviews</Link>
@@ -33,11 +33,11 @@ const Navbar: React.FC = () => {
 
             {/* Mobile Droopdown */}
             {isOpen && (
-                <div className="md:hidden mt-4 flex flex-col space-y-4">
-                    <Link href="#about" className='hover:underline'>About</Link>
-                    <Link href="#services" className='hover:underline'>Services</Link>
-                    <Link href="#reviews" className='hover:underline'>Reviews</Link>
-                    <Link href="#contact" className='hover:underline'>Contact</Link>
+                <div className="md:hidden mt-4 flex flex-col space-y-4 transition-all">
+                    <Link href="#about" className='hover:underline' onClick={toggleMenu}>About</Link>
+                    <Link href="#services" className='hover:underline' onClick={toggleMenu}>Services</Link>
+                    <Link href="#reviews" className='hover:underline' onClick={toggleMenu}>Reviews</Link>
+                    <Link href="#contact" className='hover:underline' onClick={toggleMenu}>Contact</Link>
                 </div>
             )}
         </nav>
